@@ -1,3 +1,8 @@
+##
+## Código básico para captura de imagenes 1 cada un minuto
+##
+## AAFR 29 de marzo de 2018
+
 from time import sleep
 from picamera import PiCamera
 
