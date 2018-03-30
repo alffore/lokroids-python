@@ -25,6 +25,7 @@ def clasifica_image(image_path):
         score = predictions[0][node_id]
         aux[human_string] = score
 
+    aux['imagen'] = image_path
     return aux
 
 
