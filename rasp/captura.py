@@ -9,7 +9,7 @@ from time import sleep
 from picamera import PiCamera
 
 dir_base = '/mnt/lokros/imagenes/'
-url_base = '//127.0.0.1:3000/imagenes/'
+url_base = '//192.168.1.73:3000/imagenes/'
 
 
 def guarda_json(datosf):
