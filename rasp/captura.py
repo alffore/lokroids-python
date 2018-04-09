@@ -1,5 +1,5 @@
 ##
-## Código básico para captura de imagenes 1 cada minuto
+## Codigo basico para captura de imagenes 1 cada minuto
 ##
 ## AAFR 29 de marzo de 2018
 
