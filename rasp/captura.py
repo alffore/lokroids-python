@@ -1,15 +1,23 @@
 ##
-## Codigo basico para captura de imagenes 1 cada minuto
+## Código básico para captura de imagenes 1 cada minuto
 ##
 ## AAFR 29 de marzo de 2018
 
 import time
 import json
+import socket
 from time import sleep
 from picamera import PiCamera
 
+
+def get_ip_address():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    return s.getsockname()[0]
+
+
 dir_base = '/mnt/lokros/imagenes/'
-url_base = '//192.168.1.73:3000/imagenes/'
+url_base = '//' + get_ip_address() + ':3000/imagenes/'
 
 
 def guarda_json(datosf):
