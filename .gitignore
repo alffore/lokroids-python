@@ -103,5 +103,11 @@ ENV/
 
 # idea
 .idea/
+.idea/*
 .idea/codeStyles/Project.xml
 .idea/workspace.xml
+
+#MACOS
+.DS_Store
+
+
