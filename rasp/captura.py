@@ -19,7 +19,7 @@ def get_ip_address():
 dir_base = '/mnt/lokros/imagenes/'
 """url_base = '//' + get_ip_address() + ':3000/imagenes/'"""
 
-url_base = '/imagenes/'
+url_base = ''
 
 def guarda_json(datosf):
     """
