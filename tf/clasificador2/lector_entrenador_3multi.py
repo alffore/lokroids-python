@@ -1,3 +1,5 @@
+# coding=UTF-8
+import numpy as np
 import tensorflow.keras as keras
 import tensorflow as tf
 import os
@@ -10,14 +12,18 @@ from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
 from tensorflow.keras.callbacks import TensorBoard
 import time
 
-DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/"
+# DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/"
 
-CATEGORIAS = ['dormido', 'despierto', 'otro', 'barriba', 'ausente']
+DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/'
+
+# CATEGORIAS = ['dormido', 'despierto', 'otro', 'barriba', 'ausente']
+CATEGORIAS = ['dormido', 'despierto', 'otro']
 
 IMG_SIZE = 70
 
-NAME = "bz16-adam-c{}-{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer, int(time.time()))
+NAME = "bz16-adam-c5-{}".format(int(time.time()))
 
+training_data = []
 
 def create_training_data():
     for category in CATEGORIAS:  # do dogs and cats
@@ -63,7 +69,7 @@ model.add(Activation('relu'))
 model.add(Dense(648))
 model.add(Activation('relu'))
 
-model.add(Dense(5))
+model.add(Dense(3))
 model.add(Activation('softmax'))
 
 model.compile(optimizer='adam',
@@ -72,9 +78,9 @@ model.compile(optimizer='adam',
 
 tensorboard = TensorBoard(log_dir="logs/{}".format(NAME))
 
-model.fit(X, y, batch_size=16,
-          epochs=5,
+model.fit(X, np.array(y), batch_size=8,
+          epochs=20,
           validation_split=0.3,
           callbacks=[tensorboard])
 
-model.save("modeloLokro3m.h5")
+# model.save("modeloLokro3m.h5")

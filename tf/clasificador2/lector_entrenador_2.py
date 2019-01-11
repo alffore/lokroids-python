@@ -1,3 +1,4 @@
+# coding=UTF-8
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -11,7 +12,8 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D
 from tensorflow.keras.callbacks import TensorBoard
 import time
 
-DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/"
+# DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/"
+DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/'
 
 CATEGORIAS = ['dormido', 'despierto']
 
@@ -71,6 +73,7 @@ for features,label in training_data:
     y.append(label)
 
 
+
 X = np.array(X).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 
 X = X / 255.0
@@ -83,7 +86,7 @@ for dense_layer in dense_layers:
     for layer_size in layer_sizes:
         for conv_layer in conv_layers:
 
-            NAME = "bz16-adam-c20-{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer, int(time.time()))
+            NAME = "bz16-adam-c30-{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer, int(time.time()))
             print(NAME)
 
             model = Sequential()
@@ -116,7 +119,7 @@ for dense_layer in dense_layers:
 
         model.fit(X, y,
                   batch_size=16,
-                  epochs=20,
+                  epochs=30,
                   validation_split=0.3,
                   callbacks=[tensorboard])
 
