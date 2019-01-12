@@ -102,4 +102,4 @@ for dense_layer in dense_layers:
                   validation_split=0.3,
                   callbacks=[tensorboard])
 
-model.save("modeloLokro-multi-{}.h5".format(str(conv_layers)))
+model.save("modeloLokro-multi-{}.h5".format(str(conv_layer)))
