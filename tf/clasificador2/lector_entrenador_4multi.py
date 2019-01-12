@@ -58,7 +58,7 @@ X = X / 255.0
 
 dense_layers = [0]
 layer_sizes = [128]
-conv_layers = [3, 4]
+conv_layers = [4]
 
 for dense_layer in dense_layers:
     for layer_size in layer_sizes:
@@ -102,4 +102,4 @@ for dense_layer in dense_layers:
                   validation_split=0.3,
                   callbacks=[tensorboard])
 
-        model.save("modeloLokro-multi-{}.h5".format(str(conv_layers)))
+model.save("modeloLokro-multi-{}.h5".format(str(conv_layers)))
