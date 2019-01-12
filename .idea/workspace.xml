@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d2e0a6-a6f6-489e-ae4a-230d2af4f03c" name="Default" comment="Actualizacion de la configuración del Pycharm">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tf/clasificador2/lector_entreandor_4multi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tf/clasificador2/lector_entrenador_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tf/clasificador2/lector_entrenador_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tf/clasificador2/lector_entrenador_3multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/tf/clasificador2/lector_entrenador_3multi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,17 +16,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entrenador_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
+            <state relative-caret-position="541">
+              <caret line="126" selection-start-line="80" selection-end-line="126" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entrenador_3multi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="52" />
+              <folding>
+                <element signature="e#15#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entrenador_3multi.py">
+        <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entreandor_4multi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+            <state relative-caret-position="466">
+              <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
               </folding>
@@ -56,6 +66,7 @@
         <option value="$PROJECT_DIR$/rasp/captura.py" />
         <option value="$PROJECT_DIR$/tf/clasificador2/lector_entrenador_3multi.py" />
         <option value="$PROJECT_DIR$/tf/clasificador2/lector_entrenador_2.py" />
+        <option value="$PROJECT_DIR$/tf/clasificador2/lector_entreandor_4multi.py" />
       </list>
     </option>
   </component>
@@ -72,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,6 +123,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,7 +142,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lector_entrenador_2">
+  <component name="RunManager" selected="Python.lector_entreandor_4multi">
+    <configuration name="lector_entreandor_4multi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lokroids-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tf/clasificador2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tf/clasificador2/lector_entreandor_4multi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="lector_entrenador_2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="lokroids-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,6 +208,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lector_entreandor_4multi" />
         <item itemvalue="Python.lector_entrenador_3multi" />
       </list>
     </recent_temporary>
@@ -205,13 +238,13 @@
     <frame x="0" y="22" width="1920" height="1014" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21432333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21432333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -273,15 +306,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entrenador_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
+        <state relative-caret-position="541">
+          <caret line="126" selection-start-line="80" selection-end-line="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entrenador_3multi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+        <state relative-caret-position="316">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="52" />
+          <folding>
+            <element signature="e#15#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tf/clasificador2/lector_entreandor_4multi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
           <folding>
             <element signature="e#15#33#0" expanded="true" />
           </folding>
