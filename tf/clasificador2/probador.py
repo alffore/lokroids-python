@@ -17,6 +17,7 @@ model = tf.keras.models.load_model(sys.argv[1])
 prediction = model.predict([preparaimg(sys.argv[2])])
 
 print('Modelo: '+sys.argv[1])
-print(sys.argv[2]+' Clasificado: '+CATEGORIAS[int(prediction[0][0])]+' ('+str(prediction[0][0])+')')
+print(sys.argv[2]+' Clasificado: '+CATEGORIAS[int(prediction[0][0])]+' ('+str(prediction[0])+')')
+print(CATEGORIAS)
 print(prediction)
 
