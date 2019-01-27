@@ -6,7 +6,8 @@ import tensorflow as tf
 import filetype
 import json
 
-DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes/'  # MacOS casa
+# DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes/'  # MacOS casa
+DATADIR = '/home/pi/lokros/imagenes/' # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
@@ -21,7 +22,7 @@ def preparaimg(filepath):
 
 def guarda_json(datosf):
     """
-    :type datosf: Diccionario con datos de la foto
+    :type datosf: Diccionario con datos de la imagen
     """
     with open(DATADIR + datosf['nimg'] + '.json', 'w') as outfile:
         json.dump(datosf, outfile, ensure_ascii=False)
