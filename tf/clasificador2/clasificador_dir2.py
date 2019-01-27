@@ -11,6 +11,16 @@ DATADIR = '/home/pi/lokros/imagenes/' # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
+if len(sys.argv)<4:
+    print("uso: 4 argumentos")
+    print("0. script")
+    print("1. modelo")
+    print("2. path imagenes")
+    print("3. dimension imagen")
+    exit(0)
+
+
+
 IMG_SIZE = int(sys.argv[3])
 
 
@@ -53,3 +63,4 @@ for img in os.listdir(path):
         aux_json = img.split('.')
         archivo_json = aux_json[0] + ".json"
         marcajson(os.path.join(path, archivo_json), top_k[0])
+
