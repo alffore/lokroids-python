@@ -13,8 +13,8 @@ from tensorflow.keras.callbacks import TensorBoard
 import time
 
 # DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/" # Ubuntu
-# DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
-DATADIR = '/home/pi/lokros/imagenes_clas/' # Raspberry
+DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
+# DATADIR = '/home/pi/lokros/imagenes_clas/' # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
@@ -93,7 +93,6 @@ for dense_layer in dense_layers:
 
         model.compile(loss='sparse_categorical_crossentropy',
                       optimizer='adam',
-                      # optimizer='rmsprop',
                       metrics=['accuracy'],
                       )
 
@@ -103,4 +102,4 @@ for dense_layer in dense_layers:
                   validation_split=0.3,
                   callbacks=[tensorboard])
 
-model.save("modeloLokro-multi-{}.h5".format(str(conv_layer)))
+        model.save("modeloLokro-multi-layer-{}.h5".format(str(layer_size)))
