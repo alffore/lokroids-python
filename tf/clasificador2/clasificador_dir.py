@@ -8,7 +8,7 @@ import filetype
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
-IMG_SIZE = int(sys.argv[2])
+IMG_SIZE = int(sys.argv[3])
 
 
 def preparaimg(filepath):

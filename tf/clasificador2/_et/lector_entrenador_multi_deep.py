@@ -42,7 +42,7 @@ def create_training_data():
 
 create_training_data()
 
-print("Tamaño del conjunto de entrenamiento: " + str(len(training_data)))
+print("Tamanno del conjunto de entrenamiento: " + str(len(training_data)))
 
 random.shuffle(training_data)
 
