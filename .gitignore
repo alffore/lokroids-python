@@ -111,7 +111,8 @@ ENV/
 .DS_Store
 
 
-.idea/
+.idea/*
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml
+tf/clasificador/.idea
