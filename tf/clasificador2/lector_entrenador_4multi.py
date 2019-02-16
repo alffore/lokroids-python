@@ -13,10 +13,12 @@ from tensorflow.keras.callbacks import TensorBoard
 import time
 
 # DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/" # Ubuntu
-DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
-# DATADIR = '/home/pi/lokros/imagenes_clas/' # Raspberry
+# DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
+DATADIR = '/home/pi/lokros/imagenes_clas/' # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
+
+EPOCS = 8
 
 IMG_SIZE = 70
 
@@ -65,7 +67,7 @@ for dense_layer in dense_layers:
     for layer_size in layer_sizes:
         for conv_layer in conv_layers:
 
-            NAME = "multi-bz16-adam-c30-{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer,
+            NAME = "multi-bz16-adam-c{}-{}-conv-{}-nodes-{}-dense-{}".format(EPOCS,conv_layer, layer_size, dense_layer,
                                                                              int(time.time()))
             print(NAME)
 
@@ -98,7 +100,7 @@ for dense_layer in dense_layers:
 
         model.fit(X, y,
                   batch_size=16,
-                  epochs=30,
+                  epochs=EPOCS,
                   validation_split=0.3,
                   callbacks=[tensorboard])
 
