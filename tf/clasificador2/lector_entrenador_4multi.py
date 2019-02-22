@@ -1,6 +1,6 @@
 # coding=UTF-8
 import numpy as np
-#import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import os
 import cv2
 from tqdm import tqdm
@@ -14,7 +14,7 @@ import time
 
 # DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/" # Ubuntu
 # DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
-DATADIR = '/home/pi/lokros/imagenes_clas/' # Raspberry
+DATADIR = '/home/pi/lokros/imagenes_clas/'  # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
@@ -26,7 +26,7 @@ training_data = []
 
 training_data2 = []
 
-cuenta_td = [0,0,0]
+cuenta_td = [0, 0, 0]
 
 
 def create_training_data():
@@ -42,7 +42,7 @@ def create_training_data():
                     img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)  # convert to array
                     new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))  # resize to normalize data size
                     training_data.append([new_array, class_num])  # add this to our training_data
-                    cuenta_td[clas_num]=cuenta_td[clas_num]+1
+                    cuenta_td[class_num] += 1
                 except Exception as e:
                     pass
 
@@ -53,22 +53,21 @@ random.shuffle(training_data)
 
 print(cuenta_td)
 
-cuenta_min=min(cuenta_td[0],cuenta_td[1],cuenta_td[2])
+cuenta_min = min(cuenta_td[0], cuenta_td[1], cuenta_td[2])
 
-c=[cuenta_min,cuenta_min,cuenta_min]
-
+c = [cuenta_min, cuenta_min, cuenta_min]
 
 for entry in training_data:
 
     if c[entry[1]] >= 0:
         training_data2.append(entry)
-        c[entry[1]]=c[entry[1]]-1
+        c[entry[1]] = c[entry[1]] - 1
 
 random.shuffle(training_data2)
 
 print("Tamaño del conjunto de entrenamiento: " + str(len(training_data2)))
-#training_data = []
-#exit()
+# training_data = []
+# exit()
 
 
 X = []
@@ -90,7 +89,7 @@ for dense_layer in dense_layers:
     for layer_size in layer_sizes:
         for conv_layer in conv_layers:
 
-            NAME = "multi-bz16-adam-c{}-{}-conv-{}-nodes-{}-dense-{}".format(EPOCS,conv_layer, layer_size, dense_layer,
+            NAME = "multi-bz16-adam-c{}-{}-conv-{}-nodes-{}-dense-{}".format(EPOCS, conv_layer, layer_size, dense_layer,
                                                                              int(time.time()))
             print(NAME)
 
