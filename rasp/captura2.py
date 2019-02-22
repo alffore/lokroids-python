@@ -17,7 +17,7 @@ url_base = ''
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 IMG_SIZE = 70
-nombre_modelo = '/home/pi/modeloLokro-multi-4.h5'
+nombre_modelo = '/home/pi/8_modeloLokro-multi-layer-128.h5'
 
 
 def preparaimg(filepath):

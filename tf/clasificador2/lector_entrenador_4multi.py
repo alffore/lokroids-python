@@ -18,7 +18,7 @@ DATADIR = '/home/pi/lokros/imagenes_clas/' # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
-EPOCS = 8
+EPOCS = 15
 
 IMG_SIZE = 70
 
