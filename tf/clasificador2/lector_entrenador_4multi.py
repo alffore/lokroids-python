@@ -24,6 +24,10 @@ IMG_SIZE = 70
 
 training_data = []
 
+training_data2 = []
+
+cuenta_td = [0,0,0]
+
 
 def create_training_data():
     for category in CATEGORIAS:  # do dogs and cats
@@ -38,20 +42,37 @@ def create_training_data():
                     img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)  # convert to array
                     new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))  # resize to normalize data size
                     training_data.append([new_array, class_num])  # add this to our training_data
+                    cuenta_td[clas_num]=cuenta_td[clas_num]+1
                 except Exception as e:
                     pass
 
 
 create_training_data()
 
-print("Tamaño del conjunto de entrenamiento: " + str(len(training_data)))
-
 random.shuffle(training_data)
+
+cuenta_min=min(cuenta_td[0],cuenta_td[1],cuenta_td[2])
+
+c=[cuenta_min,cuenta_min,cuenta_min]
+
+
+for entry in training_data:
+
+    if c[entry[1]] >= 0:
+        training_data2.append(entry)
+        c[entry[1]]=c[entry[1]]-1
+
+random.shuffle(training_data2)
+
+print("Tamaño del conjunto de entrenamiento: " + str(len(training_data2)))
+training_data = []
+exit()
+
 
 X = []
 y = []
 
-for features, label in training_data:
+for features, label in training_data2:
     X.append(features)
     y.append(label)
 
