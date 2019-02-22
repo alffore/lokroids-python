@@ -30,7 +30,7 @@ cuenta_td = [0,0,0]
 
 
 def create_training_data():
-    for category in CATEGORIAS:  # do dogs and cats
+    for category in CATEGORIAS:  # do dormido, depierto y otro
 
         path = os.path.join(DATADIR, category)  # create path to dogs and cats
         class_num = CATEGORIAS.index(category)  # get the classification  (0 or a 1). 0=dormido 1=despierto
