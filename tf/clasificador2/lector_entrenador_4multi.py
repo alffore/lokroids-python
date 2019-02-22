@@ -51,6 +51,8 @@ create_training_data()
 
 random.shuffle(training_data)
 
+print(cuenta_td)
+
 cuenta_min=min(cuenta_td[0],cuenta_td[1],cuenta_td[2])
 
 c=[cuenta_min,cuenta_min,cuenta_min]
@@ -65,14 +67,14 @@ for entry in training_data:
 random.shuffle(training_data2)
 
 print("Tamaño del conjunto de entrenamiento: " + str(len(training_data2)))
-training_data = []
-exit()
+#training_data = []
+#exit()
 
 
 X = []
 y = []
 
-for features, label in training_data2:
+for features, label in training_data:
     X.append(features)
     y.append(label)
 
