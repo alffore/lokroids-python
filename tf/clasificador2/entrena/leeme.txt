@@ -1,0 +1,1 @@
+Aqui se guardan las fases previas de entrenamiento todos los pesos
