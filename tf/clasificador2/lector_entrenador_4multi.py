@@ -14,7 +14,7 @@ import time
 
 # DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/" # Ubuntu
 # DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
-DATADIR = '/home/pi/lokros/imagenes_clas/'  # Raspberry
+DATADIR = '/home/pi/lokros2/imagenes_clas/'  # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
@@ -55,6 +55,8 @@ print(cuenta_td)
 
 cuenta_min = min(cuenta_td[0], cuenta_td[1], cuenta_td[2])
 
+print(cuenta_min)
+
 c = [cuenta_min, cuenta_min, cuenta_min]
 
 for entry in training_data:
@@ -63,17 +65,19 @@ for entry in training_data:
         training_data2.append(entry)
         c[entry[1]] = c[entry[1]] - 1
 
+print(c)
+
 random.shuffle(training_data2)
 
-print("Tamaño del conjunto de entrenamiento: " + str(len(training_data2)))
-# training_data = []
+print("Tamanno del conjunto de entrenamiento: " + str(len(training_data2)))
+training_data = []
 # exit()
 
 
 X = []
 y = []
 
-for features, label in training_data:
+for features, label in training_data2:
     X.append(features)
     y.append(label)
 

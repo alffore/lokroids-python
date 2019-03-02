@@ -7,7 +7,7 @@ import filetype
 import json
 
 # DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes/'  # MacOS casa
-DATADIR = '/home/pi/lokros/imagenes/' # Raspberry
+DATADIR = '/home/pi/lokros2/imagenes/' # Raspberry
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 
@@ -59,6 +59,7 @@ for img in os.listdir(path):
     if tipo_archivo is not None and tipo_archivo.mime == 'image/jpeg':
         prediction = model.predict([preparaimg(os.path.join(path, img))])
         top_k = prediction[0].argsort()[-len(prediction[0]):][::-1]
+        print(prediction)
         print(img + ' ' + str(top_k[0]) + " " + CATEGORIAS[top_k[0]])
         aux_json = img.split('.')
         archivo_json = aux_json[0] + ".json"

@@ -12,12 +12,12 @@ import cv2
 import tensorflow as tf
 import json
 
-dir_base = '/mnt/lokros/imagenes/'
+dir_base = '/media/lokros/imagenes/'
 url_base = ''
 
 CATEGORIAS = ['dormido', 'despierto', 'otro']
 IMG_SIZE = 70
-nombre_modelo = '/home/pi/30_modeloLokro-multi-4.h5'
+nombre_modelo = '/home/pi/modeloLokro-multi-layer-128.h5'
 
 
 def preparaimg(filepath):

@@ -13,9 +13,9 @@ from tensorflow.keras.callbacks import TensorBoard
 import tensorflow as tf
 import time
 
-DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/"  # Ubuntu
+# DATADIR = "/media/alfonso/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/"  # Ubuntu
 # DATADIR = '/Volumes/COMPARTIDA/devel/Tensorflow/imagenesLokro/imagenes_clas/' # MacOS casa
-# DATADIR = '/home/pi/lokros/imagenes_clas/'  # Raspberry
+DATADIR = '/home/pi/lokros2/imagenes_clas/'  # Raspberry
 
 ENTRENADIR = 'entrena/cp.ckpt'
 checkpoint_dir = os.path.dirname(ENTRENADIR)
@@ -57,7 +57,7 @@ create_training_data()
 
 random.shuffle(training_data)
 
-print(cuenta_td)
+'''print(cuenta_td)
 
 cuenta_min = min(cuenta_td[0], cuenta_td[1], cuenta_td[2])
 
@@ -74,7 +74,7 @@ random.shuffle(training_data2)
 print("Tamaño del conjunto de entrenamiento: " + str(len(training_data2)))
 # training_data = []
 # exit()
-
+'''
 
 X = []
 y = []
